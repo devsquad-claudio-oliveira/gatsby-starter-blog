@@ -54,7 +54,7 @@ const BlogIndex = ({data, location}: { data: QueryProps, location: Location }) =
       <Seo title="All posts"/>
       <ol style={{listStyle: `none`}}>
         {users.map((user: QueryProps['allContentfulUsers']['nodes']) => {
-          const title = user.firstName
+          const title = user.firstName + ', ' + user.lastName
 
           return (
             <li key={user.userId}>
